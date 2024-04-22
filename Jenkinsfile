@@ -31,7 +31,7 @@ pipeline {
         }    
          stage('containerrun') {
             steps {
-             sh "docker run -p 8070:8070  ekart:$BUILD_ID"
+             sh "docker run -d -p 8070:8070  ekart:$BUILD_ID"
             }
             }
     }
