@@ -25,13 +25,13 @@ pipeline {
 
         stage('dockerimage') {
             steps {
-             sh "docker build -t Ekart:$BUILD_ID ."
+             sh "docker build -t ekart:$BUILD_ID ."
           
             }
         }    
          stage('containerrun') {
             steps {
-             sh "docker run -p 8070:8070  Ekart:$BUILD_ID"
+             sh "docker run -p 8070:8070  ekart:$BUILD_ID"
             }
             }
     }
